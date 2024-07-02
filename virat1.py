@@ -46,7 +46,7 @@ def virat_kohli_performance():
     kohli_t20i['Date'] = pd.to_datetime(kohli_t20i['Date']).dt.date
     kohli_t20i['year'] = kohli_t20i['Date'].apply(lambda x: x.year)
     matches_played_by_year = kohli_t20i.groupby(by='year')['Match ID'].nunique().reset_index()
-    st.write("Kohli Matches Played Year by Year")
+    # st.write("Kohli Matches Played Year by Year")
     matches_played_by_year.columns = ['year', 'matches_played']
 
     st.title("Kohli's Matches Played Year by Year")
