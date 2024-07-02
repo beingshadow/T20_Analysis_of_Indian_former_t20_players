@@ -46,7 +46,7 @@ def yuvi_performance():
     yuvraj_t20i['Date'] = pd.to_datetime(yuvraj_t20i['Date']).dt.date
     yuvraj_t20i['year'] = yuvraj_t20i['Date'].apply(lambda x: x.year)
     matches_played_by_year = yuvraj_t20i.groupby(by='year')['Match ID'].nunique().reset_index()
-    st.write("Yuvraj's Matches Played Year by Year")
+    # st.write("Yuvraj's Matches Played Year by Year")
     matches_played_by_year.columns = ['year', 'matches_played']
 
     st.title("Yuvraj's Matches Played Year by Year")
