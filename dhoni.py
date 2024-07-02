@@ -46,7 +46,7 @@ def dhoni_performance():
     dhoni_t20i['Date'] = pd.to_datetime(dhoni_t20i['Date']).dt.date
     dhoni_t20i['year'] = dhoni_t20i['Date'].apply(lambda x: x.year)
     matches_played_by_year = dhoni_t20i.groupby(by='year')['Match ID'].nunique().reset_index()
-    st.write("MS Dhoni's Match Played Year by Year")
+    # st.write("MS Dhoni's Match Played Year by Year")
     matches_played_by_year.columns = ['year', 'matches_played']
 
     st.title("MS Dhoni's Matches Played Year by Year")
